@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #3b0342, #1d2b64);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 3% 0;
+}
+
+.container .todo-container {
+    background-color: #FFF;
+    padding: 2% 7%;
+    width: 75%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px #000;
+}
+
+.container .todo-container h1,
+.container .todo-container form {
+    text-align: center;
+}
+
+.container .todo-container h1,
+.container .todo-container form button {
+    text-transform: capitalize;
+    font-family: cursive;
+}
+
+.container .todo-container h1 {
+    color: #86107d;
+    font-size: 40px;
+    padding-bottom: 1.5%;
+}
+
+.container .todo-container form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+
+.container .todo-container form #todo-input,
+.container .todo-container form button {
+    height: 5vh;
+    border-radius: 10px;
+}
+
+.container .todo-container form #todo-input {
+    width: 85%;
+    padding: 2%;
+    outline: none;
+    border: 2px solid #86107d;
+    color: #333;
+    font-size: 17px;
+}
+
+.container .todo-container form button {
+    padding: 0 5%;
+    color: #FFF;
+    transition: all 0.5s ease;
+    background: linear-gradient(90deg, #8d41df 0, #360c42 100%);
+}
+
+.container .todo-container form button:hover {
+    background: linear-gradient(90deg, #360c42 0, #8d41df 100%);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.container .todo-container form button:active {
+    background: linear-gradient(90deg, #791c92 0, #a65ff3 100%);
+    transform: scale(0.99);
+} 
+
+.container .todo-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container .todo-container ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #86107d;
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.container .todo-container ul li:last-child {
+    border-bottom: none;
+}
+
+.container .todo-container ul li i {
+    color: #86107d;
+    transition: all 0.5s ease;
+}
+
+.container .todo-container ul li i:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.container .todo-container ul li i:active {
+    transform: scale(0.9);
+    color: #86107c9d;
+}
+
+@media (max-width: 980px) {
+    .container .todo-container h1 {
+        font-size: 30px;
+    }
+
+    .container .todo-container form {
+        justify-content: space-between;
+    }
+
+    .container .todo-container form #todo-input {
+        width: 75%;
+    }
+}
+
+@media (max-width: 550px) {
+    .container .todo-container ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 340px) {
+    .container .todo-container h1 {
+        font-size: 20px;
+    }
+    
+    .container .todo-container form #todo-input,
+    .container .todo-container form button {
+        font-size: 11px;
+    }
+    
+    .container .todo-container form #todo-input {
+        width: 65%;
+    }
+
+    .container .todo-container ul li {
+        font-size: 11px;
+    }
+}
